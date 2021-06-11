@@ -1,0 +1,294 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+
+{% block css%}
+<head>
+  <meta charset="utf-8">
+  <title>Clínica Dos Álamos</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
+  <!-- FancyBox -->
+  <link rel="stylesheet" href="{% static 'plugins/fancybox/jquery.fancybox.min.css' %}">
+  
+  <!-- Stylesheets -->
+  <link href="{% static 'css/style.css'  %}" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+{%endblock%}
+
+
+<!--header top-->
+<div class="header-top">
+      <div class="container clearfix">
+            <div class="top-left">
+                  <h6>Horario de atención : Lunes a Sábado de 8 a 21 hrs</h6>
+            </div>
+            <div class="top-right">
+                  <ul class="social-links">
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                  </ul>
+            </div>
+      </div>
+</div>
+<!--header top-->
+
+<!--Header Upper-->
+<section class="header-uper">
+      <div class="container clearfix">
+            <div class="logo">
+                  <figure>
+                        <a href="index.html">
+                              {% comment %} <img src="{% static 'images/logo.png' %}" alt="" width="130"> {% endcomment %}
+                        </a>
+                  </figure>
+            </div>
+            <div class="right-side">
+                  <ul class="contact-info">
+                        <li class="item">
+                              <div class="icon-box">
+                                    <i class="fa fa-envelope-o"></i>
+                              </div>
+                              <strong>Email</strong>
+                              <br>
+                              <a href="#">
+                                    <span>centrodosalamos.com</span>
+                              </a>
+                        </li>
+                        <li class="item">
+                              <div class="icon-box">
+                                    <i class="fa fa-phone"></i>
+                              </div>
+                              <strong>Llámanos</strong>
+                              <br>
+                              <span>+ (222) - 123 - 4567</span>
+                        </li>
+                  </ul>
+            </div>
+      </div>
+</section>
+
+<!-- AQUI ESTÁ EL NAV CON LOS BOTONES PARA ACCEDER A CUALQUIERA DE LOS TEMPLATES FUNCIONALES -->
+
+      <nav class="navbar navbar-default">
+        <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                          
+                                <!-- REDIRECCIONA AL TEMPLATE HOME -->
+                                <li class="nav-item"><a href="{% url 'home' %}">inicio</a></li>
+                                <!-- REDIRECCIONA AL TEMPLATE AGREGAR CITA -->
+                                <li class="nav-item"><a href="{% url 'agregar_cita' %}">Agregar cita</a></li>
+                                <!-- REDIRECCIONA AL TEMPLATE DEL LISTADO DE CITAS -->
+                                <li class="nav-item"><a href="{% url 'lista_citas' %}">Lista Citas</a></li>
+                                <!-- PAGOS -->
+                                <!-- REDIRECCIONA AL TEMPLATE LISTAR PAGOS -->
+                                <li class="nav-item"><a href="{% url 'lista_medicos_pagos' %}">Listar Pagos</a></li>
+                                
+                    </ul>
+              </div>
+        </div>
+  </nav>
+  <!-- FINAL DEL NAV CON LOS TEMPLATES FUNCIONALES -->
+
+
+<!--Main Header-->
+{% block main%} {% endblock %}
+{% block titulo_principal %} {% endblock %}
+{% block content %} {% endblock %}
+
+
+<!--footer-main-->
+<footer class="footer-main">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="about-widget">
+            <div class="footer-logo">
+              <figure>
+                <a href="index.html">
+                  {% comment %} <img src="{% static 'images/logo-2.png' %}" alt=""> {% endcomment %}
+                  <h6>Centro médico Dos Álamos</h6>
+                </a>
+              </figure>
+            </div>
+            <ul class="location-link">
+              <li class="item">
+                <i class="fa fa-map-marker"></i>
+                <p>Santiago centro, Chile</p>
+              </li>
+              <li class="item">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <a href="#">
+                  <p>centrodosalamos@gmail.com</p>
+                </a>
+              </li>
+              <li class="item">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <p>(88017) +123 4567</p>
+              </li>
+            </ul>
+            <ul class="list-inline social-icons">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h6>Servicios</h6>
+          <ul class="menu-link">
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>CLínica Dental</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Cardiología</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Ginecología</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Obstetricia</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Pediatría</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Medicina General</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="social-links">
+            <h6>Post recientes</h6>
+            <ul>
+              <li class="item">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="{% static 'images/blog/post-thumb-small.jpg' %}" alt="post-thumb">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Conoce nuestras novedades</a></h4>
+                    <p>En la clínica dos alamos contamos con distintos especialistas...</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="{% static 'images/blog/post-thumb-small.jpg' %}" alt="post-thumb">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">
+                      <a href="#">Recomendaciones Covid19</a>
+                    </h4>
+                    <p>Antes de visitarnos, sigue estas medidas para cuidarte...</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container clearfix">
+      <div class="copyright-text">
+        <p>&copy; Copyright 2018. All Rights Reserved by
+          <a href="index.html">Clínica Dos Álamos</a>
+        </p>
+      </div>
+      <ul class="footer-bottom-link">
+        <li>
+          <a href="index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="about.html">Nosotros</a>
+        </li>
+        <li>
+          <a href="contact.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!--End footer-main-->
+
+</div>
+<!--End pagewrapper-->
+
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".header-top">
+  <span class="icon fa fa-angle-up"></span>
+</div>
+
+<script src="{% static 'plugins/jquery.js' %}"></script>
+<script src="{% static 'plugins/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap-select.min.js'  %}"></script>
+<!-- Slick Slider -->
+<script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+<!-- FancyBox -->
+<script src="{% static 'plugins/fancybox/jquery.fancybox.min.js' %}"></script>
+
+<script src="{% static 'plugins/validate.js' %}"></script>
+<script src="{% static 'plugins/wow.js' %}"></script>
+<script src="{% static 'plugins/jquery-ui.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+	<script type="text/javascript" src=" {% static 'plugins/jquery.timepicker.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/jquery.timepicker.css' %}" />
+  <script type="text/javascript" src=" {% static 'plugins/jquery.rut.js' %}"></script>
+
+{% block javascript %}
+{% endblock %}
+
+</body>
+
+</html>
